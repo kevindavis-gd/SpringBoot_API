@@ -16,4 +16,11 @@ public class TopicService {
 	{
 		return topics;
 	}
+	
+	public Topic getTopic(String id)
+	{
+		// for each topic, check if t.geId is equal the id is passed in
+		// then return the topic
+		return topics.stream().filter(t-> t.getId().equals(id)).findFirst().get();
+	}
 }
